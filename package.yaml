@@ -1,0 +1,58 @@
+name:                functional-modeling
+version:             0.1.0.0
+github:              "githubuser/functional-modeling"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2018 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/reggieperry/functional-modeling#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- vector              
+- primitive           
+- singletons >=2.3 && <2.4
+- QuickCheck          
+- containers
+- template-haskell >=2
+- th-lift-instances
+- parsec
+
+library:
+  source-dirs: src
+
+executables:
+  functional-modeling-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - functional-modeling
+
+tests:
+  functional-modeling-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - functional-modeling
+    - QuickCheck
+    - hspec

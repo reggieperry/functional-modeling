@@ -1,0 +1,87 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3c2f6751094ec55ff319343c9e271f0c917bb7f6b46b17bd619a50179597d78f
+
+name:           functional-modeling
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/reggieperry/functional-modeling#readme>
+homepage:       https://github.com/githubuser/functional-modeling#readme
+bug-reports:    https://github.com/githubuser/functional-modeling/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/functional-modeling
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , parsec
+    , primitive
+    , singletons >=2.3 && <2.4
+    , template-haskell >=2
+    , th-lift-instances
+    , vector
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_functional_modeling
+  default-language: Haskell2010
+
+executable functional-modeling-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , functional-modeling
+    , parsec
+    , primitive
+    , singletons >=2.3 && <2.4
+    , template-haskell >=2
+    , th-lift-instances
+    , vector
+  other-modules:
+      Paths_functional_modeling
+  default-language: Haskell2010
+
+test-suite functional-modeling-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , functional-modeling
+    , hspec
+    , parsec
+    , primitive
+    , singletons >=2.3 && <2.4
+    , template-haskell >=2
+    , th-lift-instances
+    , vector
+  other-modules:
+      Paths_functional_modeling
+  default-language: Haskell2010
