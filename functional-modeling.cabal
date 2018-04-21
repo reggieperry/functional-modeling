@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3c2f6751094ec55ff319343c9e271f0c917bb7f6b46b17bd619a50179597d78f
+-- hash: 7acf454ff3ab76b83452328ec539a393572e3a966bdab5270bf4cc0c2d3083bf
 
 name:           functional-modeling
 version:        0.1.0.0
@@ -34,7 +34,7 @@ library
     , containers
     , parsec
     , primitive
-    , singletons >=2.3 && <2.4
+    , singletons
     , template-haskell >=2
     , th-lift-instances
     , vector
@@ -56,7 +56,7 @@ executable functional-modeling-exe
     , functional-modeling
     , parsec
     , primitive
-    , singletons >=2.3 && <2.4
+    , singletons
     , template-haskell >=2
     , th-lift-instances
     , vector
@@ -78,7 +78,7 @@ test-suite functional-modeling-test
     , hspec
     , parsec
     , primitive
-    , singletons >=2.3 && <2.4
+    , singletons
     , template-haskell >=2
     , th-lift-instances
     , vector

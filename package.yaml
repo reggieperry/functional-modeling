@@ -23,7 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - vector              
 - primitive           
-- singletons >=2.3 && <2.4
+- singletons	      
 - QuickCheck          
 - containers
 - template-haskell >=2
